@@ -862,6 +862,34 @@
     white-space: nowrap;
   }
 
+  .cert-link-icon {
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-5px) scale(0.8);
+    transition: opacity 0.2s, transform 0.2s, color 0.2s;
+    color: var(--text-tertiary);
+  }
+
+  .cert-item:hover .cert-link-icon {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    color: var(--accent);
+  }
+
+  .cert-link-icon path,
+  .cert-link-icon polyline,
+  .cert-link-icon line {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    transition: stroke-dashoffset 0.4s ease;
+  }
+
+  .cert-item:hover .cert-link-icon path,
+  .cert-item:hover .cert-link-icon polyline,
+  .cert-item:hover .cert-link-icon line {
+    stroke-dashoffset: 0;
+  }
+
   /* ── CONTACT ── */
   .contact-section { padding: 5rem 1.5rem 6rem; }
 
@@ -1589,16 +1617,31 @@
         <div class="cert-dot"></div>
         <div class="cert-name">Artificial Intelligence Certification</div>
         <div class="cert-issuer">Edunet Foundation (Microsoft) · May 2025</div>
+        <svg class="cert-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
       </a>
       <a href="https://drive.google.com/file/d/1yQe-kH8F0BDEfQlDoV8GYAdPhyTkOvA7/view?usp=sharing" target="_blank" class="cert-item" style="text-decoration: none; color: inherit;">
         <div class="cert-dot"></div>
         <div class="cert-name">Machine Learning Certification</div>
         <div class="cert-issuer">Future Interns · Jan 2026</div>
+        <svg class="cert-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
       </a>
       <a href="https://drive.google.com/file/d/10e3IlraTJjcEefQZkNru2kQg2F1Jt_m9/view?usp=sharing" target="_blank" class="cert-item" style="text-decoration: none; color: inherit;">
         <div class="cert-dot"></div>
         <div class="cert-name">Web Development Certification</div>
         <div class="cert-issuer">TechFest, IIT Bombay · Feb 2025</div>
+        <svg class="cert-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
       </a>
     </div>
   </div>
