@@ -1152,12 +1152,24 @@
     .scroll-hint { display: none; }
     .skills-section, .experience-section, .projects-section,
     .education-section, .certs-section, .contact-section { padding-left: 1rem; padding-right: 1rem; }
-    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
     .hero-cta a { width: 100%; }
+    .hero-cta .btn-primary { grid-column: 1 / -1; }
+    .hero-cta .btn-secondary {
+      grid-column: auto;
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+      font-size: 0.75rem;
+      text-align: center;
+    }
     .hero-cta .hero-icon-link {
-      width: 44px;
+      width: 100%;
       min-height: 44px;
-      align-self: flex-start;
+      align-self: stretch;
     }
     .accordion-period { white-space: normal; }
     .project-card:hover { transform: none; }
